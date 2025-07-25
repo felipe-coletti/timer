@@ -1,0 +1,65 @@
+:root {
+    --color-background-primary: ;
+    --color-foreground-primary: #ffffff;
+    --color-foreground-inverse: #333333;
+    --font-weight-bold: 800;
+}
+
+#main {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100%;
+}
+
+.soft-input {
+    background-color: transparent;
+    border: none;
+}
+
+.primary-title {
+    font-size: 3rem;
+}
+
+.title {
+    color: var(--color-foreground-primary);
+    font-weight: var(--font-weight-bold);
+}
+
+#controls {
+    align-items: center;
+    display: flex;
+    gap: 0.75rem;
+}
+
+.container:not(:hover) #controls {
+    visibility: hidden;
+}
+
+.primary-button {
+    background-color: var(--color-foreground-primary);
+    color: var(--color-foreground-inverse)
+}
+
+.tertiary-button {
+    border: 1px solid var(--color-foreground-primary);
+}
+
+.primary-button, .tertiary-button {
+    border: none;
+}
+
+.secondary-button, .tertiary-button {
+    background-color: transparent;
+    color: var(--color-foreground-primary);
+}
+
+.button {
+    align-items: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+}
