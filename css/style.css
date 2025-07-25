@@ -1,7 +1,7 @@
 :root {
-    --color-background-primary: ;
-    --color-foreground-primary: #ffffff;
-    --color-foreground-inverse: #333333;
+    --color-background-default: #000;
+    --color-background-soft: #00000090;
+    --color-foreground-default: #fff;
     --font-weight-bold: 800;
 }
 
@@ -20,6 +20,15 @@
     width: 100%;
 }
 
+#container {
+    align-items: center;
+    background-color: var(--color-background-default);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: min(100%, 40rem);
+}
+
 .soft-input {
     background-color: transparent;
     border: none;
@@ -30,7 +39,7 @@
 }
 
 .title {
-    color: var(--color-foreground-primary);
+    color: var(--color-foreground-default);
     font-weight: var(--font-weight-bold);
 }
 
@@ -40,17 +49,17 @@
     gap: 0.75rem;
 }
 
-.container:not(:hover) #controls {
+#container:not(:hover) #controls {
     visibility: hidden;
 }
 
 .primary-button {
-    background-color: var(--color-foreground-primary);
-    color: var(--color-foreground-inverse)
+    background-color: var(--color-foreground-default);
+    color: var(--color-background-default)
 }
 
 .tertiary-button {
-    border: 1px solid var(--color-foreground-primary);
+    border: 1px solid var(--color-foreground-default);
 }
 
 .primary-button, .tertiary-button {
@@ -59,7 +68,7 @@
 
 .secondary-button, .tertiary-button {
     background-color: transparent;
-    color: var(--color-foreground-primary);
+    color: var(--color-foreground-default);
 }
 
 .button {
