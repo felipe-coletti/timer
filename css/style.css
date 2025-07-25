@@ -5,6 +5,13 @@
     --font-weight-bold: 800;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
 #main {
     align-items: center;
     display: flex;
@@ -60,6 +67,7 @@
     border-radius: 0.5rem;
     cursor: pointer;
     display: flex;
+    font-weight: var(--font-weight-bold);
     justify-content: center;
     padding: 0.5rem;
 }
