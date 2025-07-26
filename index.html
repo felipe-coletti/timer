@@ -6,21 +6,24 @@
     <title>Feather</title>
     <link rel="stylesheet" href="css/style.css" />
 	<script type="module" src="js/main.js" defer></script>
+    <script type="module" src="js/input.js" defer></script>
 </head>
 <body>
     <main id="main">
         <div id="container">
-            <span id="disabled-timer" class="primary-title title">
-                <input class="hours soft-input" type="number" value="0" min="0">
-                <input class="minutes soft-input" type="number" value="0" min="0">
-                <input class="seconds soft-input" type="number" value="0" min="0">
-            </span>
+            <div id="disabled-timer">
+                <input id="hours-input" class="hours primary-title title soft-input" type="number" value="0" min="0" max="59">
+                <span class="primary-title title">:</span>
+                <input id="minutes-input" class="minutes primary-title title soft-input" type="number" value="0" min="0" max="59">
+                <span class="primary-title title">:</span>
+                <input id="seconds-input" class="seconds primary-title title soft-input" type="number" value="0" min="0" max="59">
+            </div>
             <h1 id="actived-timer" class="primary-title title">
-                <span class="hours">00</span>
+                <span class="hours"></span>
                 :
-                <span class="minutes">00</span>
+                <span class="minutes"></span>
                 :
-                <span class="seconds">00</span>
+                <span class="seconds"></span>
             </h1>
             <div id="controls">
                 <button id="play-button" class="primary-button button" type="button">Play</button>
